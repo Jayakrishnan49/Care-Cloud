@@ -8,13 +8,6 @@ import 'package:care_cloud/view/edit_profile/profile_form_fields.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:image_picker/image_picker.dart';
-// import 'package:project_1_carecloud/model/add_account_db/add_account_db.dart';
-// import 'package:project_1_carecloud/utilities/colors.dart';
-// import 'package:project_1_carecloud/utilities/custom_snackbar.dart';
-// import 'package:project_1_carecloud/utilities/custombutton.dart';
-// import 'package:project_1_carecloud/view/edit_profile/edit_profile_avatar.dart';
-// import 'package:project_1_carecloud/view/edit_profile/gender_selection.dart';
-// import 'package:project_1_carecloud/view/edit_profile/profile_form_fields.dart';
 
 class EditProfileScreen extends StatefulWidget {
   const EditProfileScreen({super.key});
@@ -58,15 +51,6 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const SizedBox(height: 25),
-                        // GenderSelection(
-                        //   selectedGender: _selectedGender,
-                        //   onGenderSelect: (gender) {
-                        //     setState(() {
-                        //       _selectedGender = gender;
-                        //       data.last.gender = gender;
-                        //     });
-                        //   },
-                        // ),
                         const SizedBox(height: 25),
                         ProfileFormFields(
                           profile: data.last,
@@ -80,7 +64,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                         ),
                           const SizedBox(height: 25),
                            
-          const Align(
+                          const Align(
                             alignment: Alignment.centerLeft,
                             child: Padding(
                               padding: EdgeInsets.only(left: 8),

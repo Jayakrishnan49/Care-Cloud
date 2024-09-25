@@ -1,7 +1,7 @@
 import 'package:care_cloud/utilities/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-// import 'package:project_1_carecloud/utilities/colors.dart';
+
 
 Widget buildSectionTitle(String title, IconData icon) {
     return Row(

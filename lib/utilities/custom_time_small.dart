@@ -10,8 +10,6 @@ class CustomTimeSmall extends StatelessWidget {
   final IconData? prefixIcon;
   final String? hintText;
   final IconData? iconButton;
-  // final FormFieldValidator<String>? validator;
-
   const CustomTimeSmall({
     super.key,
     required this.controller,
@@ -20,7 +18,7 @@ class CustomTimeSmall extends StatelessWidget {
     this.prefixIcon,
     this.hintText,
     this.iconButton,
-    // this.validator
+   
   });
 
   @override
@@ -35,19 +33,13 @@ class CustomTimeSmall extends StatelessWidget {
         SizedBox(
           width: 150,
           child: TextFormField(
-            // autofocus: false,
+    
           
             readOnly: true,
             controller: controller,
             decoration: InputDecoration(
               border: OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
-              // prefixIcon: Padding(
-              //   padding: const EdgeInsets.all(8.0),
-              //   child: FaIcon(
-              //     prefixIcon,
-              //     color: AppColors.subTitle,
-              //   ),
-              // ),
+        
               suffixIcon: IconButton(
                   onPressed: onPressed,
                   icon: FaIcon(

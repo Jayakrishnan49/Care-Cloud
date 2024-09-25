@@ -45,15 +45,6 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
-      // home: BmiCalculator(),
-      // home: CustomVitalsField(),
-      // home: MyVitals(),
-      // home: ProfileScreen(),
-      // home: AddAccount(),
-      // home: EditProfileScreen(),
-      // home: LoginScreen(),
-      // home: SelectionScreen()
-
     );
   }
 }

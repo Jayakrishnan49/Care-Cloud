@@ -11,13 +11,13 @@ class ProfileAvatar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 150.0, // Adjust the size as needed
+      width: 150.0, 
       height: 150.0,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         border: Border.all(
-          color: AppColors.secondary, // Outline color
-          width: 3.0, // Outline width
+          color: AppColors.secondary, 
+          width: 3.0,
         ),
       ),
       child: CircleAvatar(

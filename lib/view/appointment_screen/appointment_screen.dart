@@ -9,14 +9,6 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hive/hive.dart';
 import 'package:intl/intl.dart';
-// import 'package:project_1_carecloud/controller/doctor_appointment_fn.dart';
-// import 'package:project_1_carecloud/model/doctor_appointment_db/doctor_appoitment_db.dart';
-// import 'package:project_1_carecloud/utilities/colors.dart';
-// import 'package:project_1_carecloud/utilities/customTextfornField.dart';
-// import 'package:project_1_carecloud/utilities/custom_date_small.dart';
-// import 'package:project_1_carecloud/utilities/custom_time_small.dart';
-// import 'package:project_1_carecloud/utilities/custombutton.dart';
-
 class AppointmentScreen extends StatefulWidget {
   const AppointmentScreen({super.key});
 

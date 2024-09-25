@@ -30,8 +30,8 @@ class AboutUsPage extends StatelessWidget {
 
             Container(
               
-              width: 250,// Set the desired width
-              height: 250, // Set the desired height
+              width: 250,
+              height: 250, 
               decoration: const BoxDecoration(
                 // color: AppColors.primary,
                 image: DecorationImage(
@@ -52,7 +52,7 @@ class AboutUsPage extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 30),
-            // Mission Statement
+            
             buildSectionTitle('Our Mission', FontAwesomeIcons.crosshairs),
             const SizedBox(height: 10),
             const Padding(
@@ -64,7 +64,7 @@ class AboutUsPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 30),
-            // Features Section
+            
             buildSectionTitle('Key Features', FontAwesomeIcons.gear),
             const SizedBox(height: 20),
             buildFeature(Icons.lock, "Securely store medical records."),
@@ -137,41 +137,4 @@ class AboutUsPage extends StatelessWidget {
     );
   }
 
-  // Helper Method: Build section title with an icon
-  // Widget buildSectionTitle(String title, IconData icon) {
-  //   return Row(
-  //     mainAxisAlignment: MainAxisAlignment.center,
-  //     children: [
-  //       FaIcon(icon, color: AppColors.primary),
-  //       const SizedBox(width: 10),
-  //       Text(
-  //         title,
-  //         style: const TextStyle(
-  //           fontSize: 20,
-  //           fontWeight: FontWeight.bold,
-  //           color: AppColors.primary,
-  //         ),
-  //       ),
-  //     ],
-  //   );
-  // }
-
-  // Helper Method: Build individual feature rows with an icon and text
-  // Widget buildFeature(IconData icon, String text) {
-  //   return Padding(
-  //     padding: const EdgeInsets.symmetric(vertical: 8.0),
-  //     child: Row(
-  //       children: [
-  //         Icon(icon, color: AppColors.primary),
-  //         const SizedBox(width: 10),
-  //         Expanded(
-  //           child: Text(
-  //             text,
-  //             style: const TextStyle(fontSize: 16),
-  //           ),
-  //         ),
-  //       ],
-  //     ),
-  //   );
-  // }
 }

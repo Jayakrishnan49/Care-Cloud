@@ -5,8 +5,6 @@ import 'package:care_cloud/view/blood_glucose_screen/blood_glucose_screen.dart';
 import 'package:care_cloud/view/bmi_calculator_screen/bmi_calculator.dart';
 import 'package:care_cloud/view/homepage_screen/homepage_widget/bottom_navigationbar_widget.dart';
 import 'package:care_cloud/view/homepage_screen/homepage_widget/carosel_widget.dart';
-// import 'package:care_cloud/view/homepage_screen/homepage_widget/carosel_widget.dart';
-// import 'package:care_cloud/view/homepage_screen/homepage_widget/carosel_widget.dart';
 import 'package:care_cloud/view/homepage_screen/homepage_widget/health_manager_widget.dart';
 import 'package:care_cloud/view/my_vitals_page/main_vital_page.dart';
 import 'package:care_cloud/view/profile_page/profile_main_page.dart';
@@ -62,7 +60,6 @@ class _HomepageScreenState extends State<HomepageScreen> {
     List<Widget> healthManagerScreens = [
       const BloodGlucoseScreen(),
       const BmiCalculator(),
-      // const MyVitals(),
       const NewMyVitals(),
       const TodaysAppointmentScreen(),
     ];

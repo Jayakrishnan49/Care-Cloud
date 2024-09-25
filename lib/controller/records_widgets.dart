@@ -72,7 +72,7 @@ class RecordsWidgets {
           groupValue: selectedRecordType,
           onChanged: (value) {
             onChanged(value);
-            showError = false; // Reset error state when selecting
+            showError = false;
           },
         ),
         if (showError)

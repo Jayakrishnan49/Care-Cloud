@@ -25,7 +25,7 @@ class SettingsList extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: ListView.builder(
-                shrinkWrap: true, // Prevents overflow when inside Column
+                shrinkWrap: true, 
                 itemBuilder: (context, index) {
                   return InkWell(
                     onTap: tileItems[index].onTap,
@@ -41,33 +41,27 @@ class SettingsList extends StatelessWidget {
                 itemCount: tileItems.length,
               ),
             ),
-            const Spacer(), // Pushes the footer to the bottom
+            const Spacer(),
             Padding(
-              padding: EdgeInsets.only(bottom: 16.0),
+              padding: const EdgeInsets.only(bottom: 16.0),
               child: Column(
                 children: [
                   Container(
               
-              width: 80,// Set the desired width
-              height: 80, // Set the desired height
-              decoration: BoxDecoration(
-                // color: AppColors.primary,
+              width: 80,
+              height: 80, 
+              decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/app_logo/Care Cloud Logo.png'), // Replace with your app's logo
-                  fit: BoxFit.fill, // Adjusts the image to fill the container
+                  image: AssetImage('assets/app_logo/Care Cloud Logo.png'), 
+                  fit: BoxFit.fill,
                 ),
-                // borderRadius: BorderRadius.circular(10), // Optional: Rounded corners
               ),
             ),
-                  Text(
+                  const Text(
                     "Version 1.0.0",
                     style: TextStyle(color: AppColors.subTitle),
                   ),
-                  // SizedBox(height: 5),
-                  // Text(
-                  //   "© 2024 Care Cloud. All Rights Reserved.",
-                  //   style: TextStyle(color: AppColors.subTitle),
-                  // ),
+
                 ],
               ),
             ),

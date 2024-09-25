@@ -3,9 +3,7 @@ import 'package:care_cloud/utilities/custom_bmi_field.dart';
 import 'package:care_cloud/utilities/custombutton.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-// import 'package:project_1_carecloud/utilities/colors.dart';
-// import 'package:project_1_carecloud/utilities/custom_bmi_field.dart';
-// import 'package:project_1_carecloud/utilities/custombutton.dart';
+
 import 'package:syncfusion_flutter_gauges/gauges.dart';
 
 class BmiCalculator extends StatefulWidget {

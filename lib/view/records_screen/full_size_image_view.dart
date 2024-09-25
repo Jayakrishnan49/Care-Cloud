@@ -20,7 +20,7 @@ class FullSizeImageView extends StatelessWidget {
       child: Scaffold(
         body: Center(
           child: PhotoView(imageProvider: FileImage(File(imagePath)),
-          backgroundDecoration: BoxDecoration(color:AppColors.title),
+          backgroundDecoration: const BoxDecoration(color:AppColors.title),
           ),
         ),
       ),

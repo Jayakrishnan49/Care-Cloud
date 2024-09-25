@@ -70,7 +70,7 @@ class CustomBmiField extends StatelessWidget {
                             autovalidateMode:autovalidateMode?? AutovalidateMode.onUserInteraction,
                           ),
                           // SizedBox(width: 10,),
-                          Text(textMeassurement,style: TextStyle(color: AppColors.primary),)
+                          Text(textMeassurement,style: const TextStyle(color: AppColors.primary),)
                         ],
                       )
                     ],

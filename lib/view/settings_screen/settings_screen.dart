@@ -28,17 +28,6 @@ class SettingsScreen extends StatelessWidget {
               MaterialPageRoute(builder: (context) => const AboutUsPage()));
         },
       ),
-      // Sample(
-      //   "Delete Account",
-      //   const FaIcon(
-      //     FontAwesomeIcons.circleExclamation,
-      //     color: Colors.red,
-      //   ),
-      //   () {
-      //     Navigator.push(context,
-      //         MaterialPageRoute(builder: (context) => const SettingsScreen()));
-      //   },
-      // ),
     ];
     return Scaffold(
       backgroundColor: AppColors.secondary,

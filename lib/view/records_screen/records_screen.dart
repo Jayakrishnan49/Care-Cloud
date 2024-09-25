@@ -1,5 +1,3 @@
-
-// import 'dart:io';
 import 'package:care_cloud/controller/records_widgets.dart';
 import 'package:care_cloud/controller/user_record_fn.dart';
 import 'package:care_cloud/model/user_records_db/user_record_db.dart';
@@ -7,11 +5,7 @@ import 'package:care_cloud/utilities/colors.dart';
 import 'package:care_cloud/utilities/custom_snackbar.dart';
 import 'package:care_cloud/utilities/custombutton.dart';
 import 'package:flutter/material.dart';
-// import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hive/hive.dart';
-// import 'package:intl/intl.dart';
-
-
 class RecordsScreen extends StatefulWidget {
   const RecordsScreen({super.key});
 
@@ -26,7 +20,7 @@ class _RecordsScreenState extends State<RecordsScreen> {
   final _formkey = GlobalKey<FormState>();  
   String? newImagePath;
   String? selectedRecordType;
-  RecordsWidgets recordsWidgets = RecordsWidgets(); // Instance of RecordsWidgets
+  RecordsWidgets recordsWidgets = RecordsWidgets();
 
   @override
   void initState() {
@@ -36,6 +30,7 @@ class _RecordsScreenState extends State<RecordsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: no_leading_underscores_for_local_identifiers
     final UserRecordDetails _userRecordDetails = UserRecordDetails();
 
     return Scaffold(

@@ -8,15 +8,6 @@ import 'package:care_cloud/view/my_vitals_page/vitals_view_section.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:intl/intl.dart';
-// import 'package:project_1_carecloud/controller/vitals_fn.dart';
-// import 'package:project_1_carecloud/utilities/colors.dart';
-// import 'package:project_1_carecloud/utilities/custom_date.dart';
-// import 'package:project_1_carecloud/utilities/custom_time.dart';
-// import 'package:project_1_carecloud/view/my_vitals_page/vitals_input.dart';
-// import 'package:project_1_carecloud/view/my_vitals_page/vitals_save_button.dart';
-// import 'package:project_1_carecloud/view/my_vitals_page/vitals_view_section.dart';
-
-
 class NewMyVitals extends StatefulWidget {
   const NewMyVitals({super.key});
 

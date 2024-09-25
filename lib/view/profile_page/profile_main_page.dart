@@ -22,10 +22,7 @@ class ProfileScreen extends StatefulWidget {
   State<ProfileScreen> createState() => _ProfileScreenState();
 }
 
-class _ProfileScreenState extends State<ProfileScreen> {
-
-  
-   
+class _ProfileScreenState extends State<ProfileScreen> { 
   void _showDialog() {
 
     showDialog(
@@ -51,9 +48,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
       },
     );
   }
-  
-  
-  
 
   @override
   Widget build(BuildContext context) {
@@ -100,23 +94,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     age: data.last.age,
                   ),
                   SettingsList(tileItems: tileItems),
-                  // const SizedBox(height: 20), // Adds space above version text
-                  // Padding(
-                  //   padding: const EdgeInsets.only(bottom: 16.0),
-                  //   child: Column(
-                  //     children: const [
-                  //       Text(
-                  //         "Version 1.0.0",
-                  //         style: TextStyle(color: AppColors.subTitle),
-                  //       ),
-                  //       SizedBox(height: 5),
-                  //       Text(
-                  //         "© 2024 Care Cloud. All Rights Reserved.",
-                  //         style: TextStyle(color: AppColors.subTitle),
-                  //       ),
-                  //     ],
-                  //   ),
-                  // )
                 ],
               ),
             ),
@@ -126,50 +103,3 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 }
-  // void _showDialog() {
-  //   // CustomShowDialog(
-  //   //   title: 'Logout',
-  //   //   subTitle: 'Are you sure you want to logout?',
-  //   //   icon: Icon(Icons.logout),
-  //   //   onTap: () async {
-  //   //     final sharedprefs = await SharedPreferences.getInstance();
-  //   //     await sharedprefs.setBool('key', false);
-  //   //     Navigator.pushAndRemoveUntil(
-  //   //       // ignore: use_build_context_synchronously
-  //   //       context,
-  //   //       MaterialPageRoute(builder: (context) => const LoginScreen()),
-  //   //       (Route<dynamic> route) => false,
-  //   //     );
-  //   //   },
-  //   // );
-  //   showDialog(
-  //     context: context,
-  //     builder: (context) {
-  //       return AlertDialog(
-  //         title: const Text('Logout'),
-  //         content: const Text('Are you sure you want to logout?'),
-  //         actions: [
-  //           TextButton(
-  //             onPressed: () async {
-  //               final sharedprefs = await SharedPreferences.getInstance();
-  //               await sharedprefs.setBool('key', false);
-  //               Navigator.pushAndRemoveUntil(
-  //                 // ignore: use_build_context_synchronously
-  //                 context,
-  //                 MaterialPageRoute(builder: (context) => const LoginScreen()),
-  //                 (Route<dynamic> route) => false,
-  //               );
-  //             },
-  //             child: const Text('Yes'),
-  //           ),
-  //           TextButton(
-  //             onPressed: () {
-  //               Navigator.of(context).pop();
-  //             },
-  //             child: const Text('No'),
-  //           ),
-  //         ],
-  //       );
-  //     },
-  //   );
-  // }

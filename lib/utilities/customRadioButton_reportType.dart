@@ -24,7 +24,7 @@ class CustomRadioButtonReportType extends StatelessWidget {
       height: 200,
       child: ListView.builder(
         shrinkWrap: true,
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         itemCount: label.length,
         itemBuilder: (context, index) {
           return Row(

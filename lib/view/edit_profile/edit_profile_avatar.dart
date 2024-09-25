@@ -3,9 +3,6 @@ import 'dart:io';
 import 'package:care_cloud/utilities/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-// import 'package:project_1_carecloud/utilities/colors.dart';
-// import 'package:project_1_carecloud/utilities/custom_camera_gallery_bottom_sheet.dart';
-
 class EditProfileAvatar extends StatelessWidget {
   final String? imagePath;
   final VoidCallback onCameraTap;
@@ -80,12 +77,12 @@ class EditProfileAvatar extends StatelessWidget {
                 onCameraTap();
                 Navigator.pop(context);
               } ,
-              icon: FaIcon(FontAwesomeIcons.camera, size: 30),
+              icon: const FaIcon(FontAwesomeIcons.camera, size: 30),
             ),
           ),
         ),
         const SizedBox(height: 10),
-        Text('Camera', style: const TextStyle(fontSize: 15)),
+        const Text('Camera', style: TextStyle(fontSize: 15)),
       ],
     ),
      Column(
@@ -103,37 +100,17 @@ class EditProfileAvatar extends StatelessWidget {
                 onGalleryTap();
                 Navigator.pop(context);
               }, 
-              icon: FaIcon(FontAwesomeIcons.image, size: 30),
+              icon: const FaIcon(FontAwesomeIcons.image, size: 30),
             ),
           ),
         ),
         const SizedBox(height: 10),
-        Text('Gallery', style: const TextStyle(fontSize: 15)),
+        const Text('Gallery', style: TextStyle(fontSize: 15)),
       ],
     )
                     ],
                   ),
                  );
-                  // return SizedBox(
-                  //   height: 120,
-                  //   width: double.infinity,
-                  //   child: Row(
-                  //     mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  //     children: [
-                  //       IconButton(
-                  //         onPressed: onCameraTap,
-                  //         icon: const Icon(Icons.camera, size: 50),
-                  //       ),
-                  //       IconButton(
-                  //         onPressed: onGalleryTap,
-                  //         icon: const Icon(Icons.image, size: 50),
-                  //       ),
-                  //     ],
-                  //   ),
-                  // );
-
-                  
-
                 },
               );
             },

@@ -26,22 +26,7 @@ class HealthManagerSection extends StatelessWidget {
             style: TextStyle(fontSize: 22),
           ),
           const SizedBox(height: 20),
-          // Row(
-          //   // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          //   children: List.generate(3, (index) {
-          //     return HealthManagerCatagory(
-          //       text: texts[index],
-          //       image: images[index],
-          //       onTap: () {
-          //         Navigator.push(
-          //           context,
-          //           MaterialPageRoute(builder: (context) => screens[index]),
-          //         );
-          //       },
-          //     );
-          //   }),
-          // ),
+      
           Padding(
             padding: const EdgeInsets.only(left: 10,right: 10),
             child: Row(

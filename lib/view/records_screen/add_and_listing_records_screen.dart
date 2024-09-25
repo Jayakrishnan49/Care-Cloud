@@ -7,10 +7,8 @@ import 'package:care_cloud/view/records_screen/full_size_image_view.dart';
 import 'package:care_cloud/view/records_screen/records_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:hive/hive.dart';
+// import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-
-
 class AddAndListingRecordsScreen extends StatefulWidget {
   const AddAndListingRecordsScreen({super.key});
 
@@ -27,7 +25,7 @@ class _AddAndListingRecordsScreenState
       backgroundColor: AppColors.secondary,
       floatingActionButton: FloatingActionButton.extended(
         backgroundColor: AppColors.primary,
-        icon: FaIcon(
+        icon: const FaIcon(
           FontAwesomeIcons.arrowUpFromBracket,
           color: AppColors.secondary,
         ),
@@ -37,7 +35,7 @@ class _AddAndListingRecordsScreenState
             MaterialPageRoute(builder: (context) => const RecordsScreen()),
           );
         },
-        label: Text(
+        label: const Text(
           'Upload records',
           style: TextStyle(color: AppColors.secondary),
         ),
@@ -68,14 +66,14 @@ class _AddAndListingRecordsScreenState
                       context: context,
                       builder: (BuildContext context) {
                         return AlertDialog(
-                          title: Row(
+                          title: const Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Icon(
                                 (Icons.delete),
                                 color: Colors.red,
                               ),
-                              const Text(
+                              Text(
                                 'Delete Record',
                                 style: TextStyle(
                                     color: AppColors.primary, fontSize: 20),
@@ -102,7 +100,7 @@ class _AddAndListingRecordsScreenState
                                       Navigator.of(context).pop();
                                     },
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 20,
                                   ),
                                   CustomButton(
@@ -171,7 +169,7 @@ class _AddAndListingRecordsScreenState
                               children: [
                                 Text(
                                   userRecord.reportType,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     color: AppColors.primary,
                                     fontSize: 18,
                                   ),
@@ -186,7 +184,7 @@ class _AddAndListingRecordsScreenState
                         IconButton(onPressed: (){
                           Navigator.push(context, MaterialPageRoute(builder: (context)=>EditRecordsScreen(index: index,)));
                         }, 
-                        icon: Icon(Icons.edit_document))
+                        icon: const Icon(Icons.edit_document))
                         
                       ],
                     ),

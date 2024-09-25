@@ -1,9 +1,6 @@
 import 'package:care_cloud/utilities/colors.dart';
 import 'package:care_cloud/utilities/custombutton.dart';
 import 'package:flutter/material.dart';
-// import 'package:project_1_carecloud/utilities/colors.dart';
-// import 'package:project_1_carecloud/utilities/custombutton.dart';
-
 class GenderSelection extends StatelessWidget {
   final String selectedGender;
   final Function(String) onGenderSelect;

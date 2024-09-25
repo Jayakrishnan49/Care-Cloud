@@ -36,13 +36,7 @@ class CustomDateSmall extends StatelessWidget {
             controller: controller,
             decoration: InputDecoration(
               border: OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
-              // prefixIcon: Padding(
-              //   padding: const EdgeInsets.only(top: 9,left: 9),
-              //   child: FaIcon(
-              //     prefixIcon,
-              //     color: AppColors.subTitle,
-              //   ),
-              // ),
+          
               suffixIcon: IconButton(
                   onPressed: onPressed,
                   icon: FaIcon(

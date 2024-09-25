@@ -1,6 +1,3 @@
-// ignore_for_file: prefer_const_declarations
-
-
 
 import 'package:care_cloud/controller/login_fn.dart';
 import 'package:care_cloud/main.dart';
@@ -13,14 +10,12 @@ import 'package:care_cloud/view/signup_screen/signup_screen.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
 }
-
 class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
@@ -102,14 +97,12 @@ class _LoginScreenState extends State<LoginScreen> {
                               // ignore: use_build_context_synchronously
                               context,
                               MaterialPageRoute(
-                                  // builder: (context) => const HomepageScreen()));
                                   builder: (context) => const AddAccount()));
                         } else {
                           Navigator.push(
                               // ignore: use_build_context_synchronously
                               context,
                               MaterialPageRoute(
-                                  // builder: (context) => const AddAccount()));
                                   builder: (context) =>
                                       const HomepageScreen()));
                         }

@@ -6,8 +6,5 @@ class BloodGlucoseDetails{
     final bloodGlucoseData=Hive.box<BloodGlucoseDb>('bloodGlucoseBox');
      final _id = await bloodGlucoseData.add(value);
     value.id = _id;
-    // for (var bloodGlucose in bloodGlucoseData.values) {
-    //   print('Date: ${bloodGlucose.date}, Time: ${bloodGlucose.time}, BP: ${bloodGlucose.glucose}, Pulse: ${bloodGlucose.foodIntakeTimings}, ');
-    // }
   }
 }
