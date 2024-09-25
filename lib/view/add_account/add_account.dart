@@ -9,13 +9,6 @@ import 'package:care_cloud/utilities/custombutton.dart';
 import 'package:care_cloud/view/homepage_screen/homepage_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-// import 'package:project_1_carecloud/controller/profile_fn.dart';
-// import 'package:project_1_carecloud/model/add_account_db/add_account_db.dart';
-// import 'package:project_1_carecloud/utilities/custom_camera_gallery_bottom_sheet.dart';
-// import 'package:project_1_carecloud/view/homepage_screen/homepage_screen.dart';
-// import 'package:project_1_carecloud/utilities/colors.dart';
-// import 'package:project_1_carecloud/utilities/customTextfornField.dart';
-// import 'package:project_1_carecloud/utilities/custombutton.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AddAccount extends StatefulWidget {
@@ -99,34 +92,7 @@ class _AddAccountState extends State<AddAccount> {
                               showModalBottomSheet(
                                   context: context,
                                   builder: (context) {
-                                    // return SizedBox(
-                                    //   height: 120,
-                                    //   width: double.infinity,
-                                    //   child: Row(
-                                    //     mainAxisAlignment:
-                                    //         MainAxisAlignment.spaceAround,
-                                    //     children: [
-                                    //       IconButton(
-                                    //           onPressed: () {
-                                    //             cameraImage();
-                                    //             Navigator.pop(context);
-                                    //           },
-                                    //           icon: const Icon(
-                                    //             Icons.camera,
-                                    //             size: 50,
-                                    //           )),
-                                    //       IconButton(
-                                    //           onPressed: () {
-                                    //             galleryImage();
-                                    //             Navigator.pop(context);
-                                    //           },
-                                    //           icon: const Icon(
-                                    //             Icons.image,
-                                    //             size: 50,
-                                    //           ))
-                                    //     ],
-                                    //   ),
-                                    // );
+                                    
                                     return CustomCameraGalleryBottomSheet(
                                 onImagePicked: (imagePath) {
                               setState(() {
@@ -290,9 +256,19 @@ class _AddAccountState extends State<AddAccount> {
                         borderRadius: 10,
                         onTap: () async {
                           if (_formkey.currentState!.validate()) {
+                            if (image == null || image!.isEmpty) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(
+                                  backgroundColor: Colors.red,
+                                   content: Text("Please add a profile picture"),
+                                ),
+                              );
+                              // return;
+                            }
                             if (_selectedGender.isEmpty) {
                               ScaffoldMessenger.of(context).showSnackBar(
                                 const SnackBar(
+                                  backgroundColor: Colors.red,
                                   content: Text("Please select a gender"),
                                 ),
                               );
