@@ -1,119 +1,171 @@
-import 'package:care_cloud/utilities/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 
 class TermsAndConditionsScreen extends StatelessWidget {
-  const TermsAndConditionsScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.secondary,
       appBar: AppBar(
-        title: const Text("Terms and Conditions"),
-        backgroundColor: AppColors.secondary,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
+        title: Text('Terms and Conditions'),
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(20.0),
+        padding: EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            buildSectionTitle('Terms and Conditions', FontAwesomeIcons.fileContract),
-            const SizedBox(height: 20),
-            const Text(
-              "By using Care Cloud, you agree to comply with these terms and conditions. Please read them carefully.",
+            Text(
+              'Terms and Conditions for Care Cloud\n',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            Text(
+              'Terms and Conditions\nLast updated: September 30, 2024\n\n'
+              'Please read these terms and conditions carefully before using Our Service.\n\n'
+              'Interpretation and Definitions\n'
+              'Interpretation\n'
+              'The words of which the initial letter is capitalized have meanings defined under the following conditions. '
+              'The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.\n\n'
+              'Definitions\n'
+              'For the purposes of these Terms and Conditions:\n\n'
+              'Application means the software program provided by the Company downloaded by You on any electronic device, named Care Cloud.\n\n'
+              'Application Store means the digital distribution service operated and developed by Apple Inc. (Apple App Store) or Google Inc. (Google Play Store) in which the Application has been downloaded.\n\n'
+              'Affiliate means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.\n\n'
+              'Country refers to: Kerala, India.\n\n'
+              'Company (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Care Cloud.\n\n'
+              'Device means any device that can access the Service such as a computer, a cellphone or a digital tablet.\n\n'
+              'Service refers to the Application.\n\n'
+              'Terms and Conditions (also referred as "Terms") mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service. '
+              'This Terms and Conditions agreement has been created with the help of the Terms and Conditions Generator.\n\n'
+              'Third-party Social Media Service means any services or content (including data, information, products or services) provided by a third-party that may be displayed, included or made available by the Service.\n\n'
+              'You means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.\n\n'
+              'Acknowledgment\n'
+              'These are the Terms and Conditions governing the use of this Service and the agreement that operates between You and the Company. '
+              'These Terms and Conditions set out the rights and obligations of all users regarding the use of the Service.\n\n'
+              'Your access to and use of the Service is conditioned on Your acceptance of and compliance with these Terms and Conditions. '
+              'These Terms and Conditions apply to all visitors, users and others who access or use the Service.\n\n'
+              'By accessing or using the Service You agree to be bound by these Terms and Conditions. If You disagree with any part of these Terms and Conditions then You may not access the Service.\n\n'
+              'You represent that you are over the age of 18. The Company does not permit those under 18 to use the Service.\n\n'
+              'Your access to and use of the Service is also conditioned on Your acceptance of and compliance with the Privacy Policy of the Company. '
+              'Our Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your personal information when You use the Application or the Website and tells You about Your privacy rights and how the law protects You. '
+              'Please read Our Privacy Policy carefully before using Our Service.\n\n'
+              'Links to Other Websites\n'
+              'Our Service may contain links to third-party web sites or services that are not owned or controlled by the Company.\n\n'
+              'The Company has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. '
+              'You further acknowledge and agree that the Company shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods or services available on or through any such web sites or services.\n\n'
+              'We strongly advise You to read the terms and conditions and privacy policies of any third-party web sites or services that You visit.\n\n'
+              'Termination\n'
+              'We may terminate or suspend Your access immediately, without prior notice or liability, for any reason whatsoever, including without limitation if You breach these Terms and Conditions.\n\n'
+              'Upon termination, Your right to use the Service will cease immediately.\n\n'
+              'Limitation of Liability\n'
+              'Notwithstanding any damages that You might incur, the entire liability of the Company and any of its suppliers under any provision of this Terms and Your exclusive remedy for all of the foregoing shall be limited to the amount actually paid by You through the Service or 100 USD if You haven\'t purchased anything through the Service.\n\n'
+              'To the maximum extent permitted by applicable law, in no event shall the Company or its suppliers be liable for any special, incidental, indirect, or consequential damages whatsoever (including, but not limited to, damages for loss of profits, loss of data or other information, for business interruption, for personal injury, loss of privacy arising out of or in any way related to the use of or inability to use the Service, third-party software and/or third-party hardware used with the Service, or otherwise in connection with any provision of this Terms), even if the Company or any supplier has been advised of the possibility of such damages and even if the remedy fails of its essential purpose.\n\n'
+              'Some states do not allow the exclusion of implied warranties or limitation of liability for incidental or consequential damages, which means that some of the above limitations may not apply. In these states, each party\'s liability will be limited to the greatest extent permitted by law.\n\n'
+              '"AS IS" and "AS AVAILABLE" Disclaimer\n'
+              'The Service is provided to You "AS IS" and "AS AVAILABLE" and with all faults and defects without warranty of any kind. '
+              'To the maximum extent permitted under applicable law, the Company, on its own behalf and on behalf of its Affiliates and its and their respective licensors and service providers, expressly disclaims all warranties, whether express, implied, statutory or otherwise, with respect to the Service, including all implied warranties of merchantability, fitness for a particular purpose, title and non-infringement, and warranties that may arise out of course of dealing, course of performance, usage or trade practice. '
+              'Without limitation to the foregoing, the Company provides no warranty or undertaking, and makes no representation of any kind that the Service will meet Your requirements, achieve any intended results, be compatible or work with any other software, applications, systems or services, operate without interruption, meet any performance or reliability standards or be error free or that any errors or defects can or will be corrected.\n\n'
+              'Without limiting the foregoing, neither the Company nor any of the company\'s provider makes any representation or warranty of any kind, express or implied: '
+              '(i) as to the operation or availability of the Service, or the information, content, and materials or products included thereon; '
+              '(ii) that the Service will be uninterrupted or error-free; '
+              '(iii) as to the accuracy, reliability, or currency of any information or content provided through the Service; or '
+              '(iv) that the Service, its servers, the content, or e-mails sent from or on behalf of the Company are free of viruses, scripts, trojan horses, worms, malware, timebombs or other harmful components.\n\n'
+              'Some jurisdictions do not allow the exclusion of certain types of warranties or limitations on applicable statutory rights of a consumer, so some or all of the above exclusions and limitations may not apply to You. '
+              'But in such a case the exclusions and limitations set forth in this section shall be applied to the greatest extent enforceable under applicable law.\n\n'
+              'Governing Law\n'
+              'The laws of the Country, excluding its conflicts of law rules, shall govern this Terms and Your use of the Service. '
+              'Your use of the Application may also be subject to other local, state, national, or international laws.\n\n'
+              'Disputes Resolution\n'
+              'If You have any concern or dispute about the Service, You agree to first try to resolve the dispute informally by contacting the Company.\n\n'
+              'For European Union (EU) Users\n'
+              'If You are a European Union consumer, you will benefit from any mandatory provisions of the law of the country in which You are resident.\n\n'
+              'United States Legal Compliance\n'
+              'You represent and warrant that (i) You are not located in a country that is subject to the United States government embargo, or that has been designated by the United States government as a "terrorist supporting" country, and (ii) You are not listed on any United States government list of prohibited or restricted parties.\n\n'
+              'Severability and Waiver\n'
+              'Severability\n'
+              'If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. '
+              'These Terms constitute the entire agreement between us regarding our Service, and supersede and replace any prior agreements we might have between us regarding the Service.\n\n'
+              'Waiver\n'
+              'Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. '
+              'If any waiver of any provision of these Terms is held to be invalid, the remainder of these Terms will remain in effect.\n\n'
+              'Changes to These Terms and Conditions\n'
+              'We reserve the right, at Our sole discretion, to modify or replace these Terms at any time. '
+              'If a revision is material, we will make reasonable efforts to provide at least 30 days\' notice prior to any new terms taking effect. '
+              'What constitutes a material change will be determined at Our sole discretion.\n\n'
+              'By continuing to access or use Our Service after those revisions become effective, You agree to be bound by the revised terms. '
+              'If You do not agree to the new terms, You are no longer authorized to use the Service.\n\n'
+              'Contact Us\n'
+              'If you have any questions about these Terms and Conditions, please contact us:\n'
+              'By email: support@carecloud.com\n'
+              'By visiting this page on our website: www.carecloud.com/contact\n'
+              'By phone number: 123-456-7890\n',
               style: TextStyle(fontSize: 16),
-              textAlign: TextAlign.left,
             ),
-            const SizedBox(height: 30),
-            buildSectionTitle('User Agreement', FontAwesomeIcons.users),
-            const SizedBox(height: 10),
-            const Text(
-              "You agree to use Care Cloud in a lawful manner and not misuse the services provided. Any unauthorized or illegal use of the app will result in account termination.",
-              style: TextStyle(fontSize: 16),
-            ),
-            const SizedBox(height: 30),
-            buildSectionTitle('Data Usage', FontAwesomeIcons.database),
-            const SizedBox(height: 10),
-            const Text(
-              "Care Cloud stores your health-related data on your device. By using the app, you consent to the storage of your personal information for the purpose of using the app's services.",
-              style: TextStyle(fontSize: 16),
-            ),
-            const SizedBox(height: 30),
-            buildSectionTitle('Limitation of Liability', FontAwesomeIcons.triangleExclamation),
-            const SizedBox(height: 10),
-            const Text(
-              "Care Cloud is not liable for any damages arising from the use or inability to use the app. We do not guarantee the accuracy or completeness of the data stored in the app.",
-              style: TextStyle(fontSize: 16),
-            ),
-            const SizedBox(height: 30),
-            buildSectionTitle('User Responsibilities', FontAwesomeIcons.userShield),
-            const SizedBox(height: 10),
-            const Text(
-              "As a user, you are responsible for keeping your login credentials secure and ensuring that the information you provide is accurate and up to date.",
-              style: TextStyle(fontSize: 16),
-            ),
-            const SizedBox(height: 30),
-            buildSectionTitle('Modifications', FontAwesomeIcons.penToSquare),
-            const SizedBox(height: 10),
-            const Text(
-              "We reserve the right to modify these terms at any time. Any changes will be communicated to users through the app or email. Continued use of the app indicates acceptance of these terms.",
-              style: TextStyle(fontSize: 16),
-            ),
-            const SizedBox(height: 30),
-            buildSectionTitle('Contact Us', FontAwesomeIcons.envelope),
-            const SizedBox(height: 10),
-            // ignore: prefer_const_constructors
-            Row(
-              children: const [
-                Icon(Icons.email, color: AppColors.primary),
-                SizedBox(width: 10),
-                Text("connect.carecloud@gmail.com", style: TextStyle(fontSize: 16)),
-              ],
-            ),
-            const SizedBox(height: 30),
-            const Text(
-              "Thank you for choosing Care Cloud. We are committed to providing you with a secure and efficient health management platform.",
-              style: TextStyle(fontSize: 16),
-            ),
-            const SizedBox(height: 30),
-            const Text(
-              "Version 1.0.0",
-              style: TextStyle(color: AppColors.subTitle),
-            ),
-            const SizedBox(height: 5),
-            const Text(
-              "© 2024 Care Cloud. All Rights Reserved.",
-              style: TextStyle(color: AppColors.subTitle),
-            ),
-            const SizedBox(height: 30),
           ],
         ),
       ),
     );
   }
-
-  Widget buildSectionTitle(String title, IconData icon) {
-    return Row(
-      children: [
-        FaIcon(icon, color: AppColors.primary),
-        const SizedBox(width: 10),
-        Text(
-          title,
-          style: const TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            color: AppColors.primary,
-          ),
-        ),
-      ],
-    );
-  }
 }
+
+
+
+
+
+
+
+
+
+// import 'package:flutter/material.dart';
+// import 'package:webview_flutter/webview_flutter.dart';
+
+// class TermsAndConditionsScreen extends StatefulWidget {
+//   const TermsAndConditionsScreen({super.key});
+
+//   @override
+//   // ignore: library_private_types_in_public_api
+//   _TermsAndConditionsScreenState createState() => _TermsAndConditionsScreenState();
+// }
+
+// class _TermsAndConditionsScreenState extends State<TermsAndConditionsScreen> {
+//   late WebViewController _controller;
+
+//   @override
+//   void initState() {
+//     super.initState();
+//     _controller = WebViewController()
+//       ..setJavaScriptMode(JavaScriptMode.unrestricted)
+//       ..setBackgroundColor(const Color(0x00000000))
+//       ..setNavigationDelegate(
+//         NavigationDelegate(
+//           onProgress: (int progress) {
+//             // Update loading bar.
+//           },
+//           onPageStarted: (String url) {},
+//           onPageFinished: (String url) {},
+//           onWebResourceError: (WebResourceError error) {},
+//           onNavigationRequest: (NavigationRequest request) {
+//             if (request.url.startsWith('https://www.youtube.com/')) {
+//               return NavigationDecision.prevent;
+//             }
+//             return NavigationDecision.navigate;
+//           },
+//         ),
+//       )
+//       ..loadRequest(Uri.parse(
+//           'https://www.privacypolicies.com/live/de8f6973-d3bf-4052-a13b-a6aa71acf10c'));
+//   }
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         backgroundColor: Colors.white,
+//         automaticallyImplyLeading: true,
+//         toolbarHeight: 100,
+//         title: const Text(
+//           'Terms & Conditions',
+//           style: TextStyle(fontWeight: FontWeight.bold),
+//         ),
+//       ),
+//       body: WebViewWidget(controller: _controller),
+// );
+// }
+// }

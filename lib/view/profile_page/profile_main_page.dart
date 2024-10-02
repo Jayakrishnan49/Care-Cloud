@@ -61,13 +61,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
         Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) => const PrivacyPolicyScreen()));
+                builder: (context) =>  PrivacyPolicyScreen()));
       }),
       Sample("Terms & Conditions", const FaIcon(FontAwesomeIcons.penNib), () {
         Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) => const TermsAndConditionsScreen()));
+                builder: (context) =>  TermsAndConditionsScreen()));
       }),
       Sample(
           "Logout",
@@ -87,7 +87,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             child: SafeArea(
               child: Column(
                 children: [
-                  ProfileAvatar(imagePath: data.last.image),
+                  ProfileAvatar(imagePath: data.last.image??'123'),
                   UserInfo(
                     username: data.last.username,
                     gender: data.last.gender,

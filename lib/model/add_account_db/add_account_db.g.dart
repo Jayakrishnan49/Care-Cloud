@@ -25,7 +25,7 @@ class ProfileDbAdapter extends TypeAdapter<ProfileDb> {
       address: fields[5] as String?,
       pincode: fields[6] as String?,
       city: fields[7] as String?,
-      image: fields[8] as String,
+      image: fields[8] as String?,
     );
   }
 

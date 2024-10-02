@@ -52,7 +52,7 @@ class SettingsList extends StatelessWidget {
               height: 80, 
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/app_logo/Care Cloud Logo.png'), 
+                  image: AssetImage('assets/app_logo/Care Cloud Logo 1 new.png'), 
                   fit: BoxFit.fill,
                 ),
               ),

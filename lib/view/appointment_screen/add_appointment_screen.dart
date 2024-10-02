@@ -6,12 +6,6 @@ import 'package:care_cloud/view/appointment_screen/appointment_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hive_flutter/adapters.dart';
-// import 'package:project_1_carecloud/model/doctor_appointment_db/doctor_appoitment_db.dart';
-// import 'package:project_1_carecloud/utilities/colors.dart';
-// import 'package:project_1_carecloud/utilities/custom_show_dialog.dart';
-// import 'package:project_1_carecloud/utilities/custom_snackbar.dart';
-// import 'package:project_1_carecloud/view/appointment_screen/appointment_screen.dart';
-
 class AddAppointmentScreen extends StatelessWidget {
   const AddAppointmentScreen({super.key});
 
@@ -63,9 +57,7 @@ class AddAppointmentScreen extends StatelessWidget {
                                 box.deleteAt(index);
                                             Navigator.of(context).pop();
                                            
-                                            CustomSnackbar.show(context: context, text: 'Record deleted', backgroundColor: Colors.red);
-
-                                            
+                                            CustomSnackbar.show(context: context, text: 'Record deleted', backgroundColor: Colors.red);      
                                });
                           
                             },

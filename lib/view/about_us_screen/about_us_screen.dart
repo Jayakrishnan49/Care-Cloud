@@ -35,7 +35,7 @@ class AboutUsPage extends StatelessWidget {
               decoration: const BoxDecoration(
                 // color: AppColors.primary,
                 image: DecorationImage(
-                  image: AssetImage('assets/app_logo/Care Cloud Logo.png'), // Replace with your app's logo
+                  image: AssetImage('assets/app_logo/Care Cloud Logo 1 new.png'), // Replace with your app's logo
                   fit: BoxFit.fill, // Adjusts the image to fill the container
                 ),
                 // borderRadius: BorderRadius.circular(10), // Optional: Rounded corners

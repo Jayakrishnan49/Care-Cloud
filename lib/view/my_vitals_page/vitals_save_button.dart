@@ -1,5 +1,6 @@
 import 'package:care_cloud/controller/vitals_fn.dart';
 import 'package:care_cloud/model/vitals_db/vitals_db.dart';
+import 'package:care_cloud/utilities/custom_snackbar.dart';
 import 'package:care_cloud/utilities/custombutton.dart';
 import 'package:flutter/material.dart';
 
@@ -29,15 +30,9 @@ class VitalsSaveButton extends StatelessWidget {
       onTap: () {
         if (formKey.currentState!.validate()) {
           if (dateController.text.isEmpty || timeController.text.isEmpty) {
-            ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(
-                content: Text('Please enter both date and time.'),
-                backgroundColor: Colors.red,
-              ),
-            );
+            CustomSnackbar.show(context: context, text: 'Please enter both date and time.', backgroundColor: Colors.red);
             return;
           }
-
           vitalsDetails.addVitals(
             VitalsDb(
               date: dateController.text,
@@ -50,13 +45,7 @@ class VitalsSaveButton extends StatelessWidget {
               exercise: controllers[5].text,
             ),
           );
-
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(
-              content: Text('Vitals updated successfully'),
-              backgroundColor: Colors.green,
-            ),
-          );
+          CustomSnackbar.show(context: context, text: 'Vitals updated successfully', backgroundColor: Colors.green);
         }
       },
     );

@@ -1,21 +1,23 @@
-
 import 'package:care_cloud/controller/login_fn.dart';
 import 'package:care_cloud/main.dart';
 import 'package:care_cloud/utilities/colors.dart';
 import 'package:care_cloud/utilities/customTextfornField.dart';
+import 'package:care_cloud/utilities/custom_snackbar.dart';
 import 'package:care_cloud/utilities/custombutton.dart';
-import 'package:care_cloud/view/add_account/add_account.dart';
+import 'package:care_cloud/view/add_account/add_account_main.dart';
 import 'package:care_cloud/view/homepage_screen/homepage_screen.dart';
 import 'package:care_cloud/view/signup_screen/signup_screen.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
 }
+
 class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
@@ -99,21 +101,17 @@ class _LoginScreenState extends State<LoginScreen> {
                               MaterialPageRoute(
                                   builder: (context) => const AddAccount()));
                         } else {
-                          Navigator.push(
-                              // ignore: use_build_context_synchronously
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      const HomepageScreen()));
+                          Navigator.pushAndRemoveUntil(
+                            // ignore: use_build_context_synchronously
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const HomepageScreen()),
+                            (Route<dynamic> route) => false,
+                          );
                         }
                       } else {
-                        final snackBar = const SnackBar(
-                          content: Text('Incorrect Username or Password'),
-                          duration: Duration(seconds: 5),
-                          backgroundColor: Colors.red,
-                        );
                         // ignore: use_build_context_synchronously
-                        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                        CustomSnackbar.show(context: context, text: 'Incorrect Username or Password', backgroundColor: Colors.red);
                       }
                     }
                   },

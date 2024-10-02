@@ -30,8 +30,8 @@ class ProfileDb extends HiveObject {
   String ?city;
 
   @HiveField(8)
-  String image;
+  String ?image;
 
 
-  ProfileDb({this.id,required this.username,required this.phoneno,required this.gender,required this.age,this.address,this.pincode,this.city,required this.image});
+  ProfileDb({this.id,required this.username,required this.phoneno,required this.gender,required this.age,this.address,this.pincode,this.city,this.image});
 }

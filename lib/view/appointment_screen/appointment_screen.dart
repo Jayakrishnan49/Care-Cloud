@@ -3,6 +3,7 @@ import 'package:care_cloud/model/doctor_appointment_db/doctor_appoitment_db.dart
 import 'package:care_cloud/utilities/colors.dart';
 import 'package:care_cloud/utilities/customTextfornField.dart';
 import 'package:care_cloud/utilities/custom_date_small.dart';
+import 'package:care_cloud/utilities/custom_snackbar.dart';
 import 'package:care_cloud/utilities/custom_time_small.dart';
 import 'package:care_cloud/utilities/custombutton.dart';
 import 'package:flutter/material.dart';
@@ -97,7 +98,7 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                               final DateTime? date = await showDatePicker(
                                 context: context,
                                 initialDate: DateTime.now(),
-                                firstDate: DateTime(2000),
+                                firstDate: DateTime.now(),
                                 lastDate: DateTime(2050),
                               );
 
@@ -150,16 +151,7 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                   if (_formkey.currentState!.validate()) {
                     if (dateController.text.isEmpty ||
                         timeController.text.isEmpty) {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text('Please enter both date and time.'),
-                          behavior: SnackBarBehavior.floating,
-                          backgroundColor: Colors.red,
-                          margin: EdgeInsets.all(20),
-                          duration: Duration(seconds: 3),
-                          showCloseIcon: true,
-                        ),
-                      );
+                        CustomSnackbar.show(context: context, text: 'Please enter both date and time.', backgroundColor: Colors.red);
                       return;
                     }
                     _doctorappointmentDetails.addAppointments(
@@ -176,16 +168,7 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                       timeController.clear();
                       doctorAddressController.clear();
                     });
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                        content: Text('Appointment added successfully'),
-                        behavior: SnackBarBehavior.floating,
-                        backgroundColor: Colors.green,
-                        margin: EdgeInsets.all(20),
-                        duration: Duration(seconds: 3),
-                        showCloseIcon: true,
-                      ),
-                    );
+                    CustomSnackbar.show(context: context, text: 'Appointment added successfully', backgroundColor:Colors.green);
                   }
                 },
               ),

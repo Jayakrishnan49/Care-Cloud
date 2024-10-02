@@ -14,18 +14,6 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:intl/intl.dart';
-// import 'package:project_1_carecloud/controller/blood_glucose_fn.dart';
-// import 'package:project_1_carecloud/model/blood_glucose_db/blood_glucose_db.dart';
-// import 'package:project_1_carecloud/utilities/colors.dart';
-// import 'package:project_1_carecloud/utilities/customRadioButton_foodIntake.dart';
-// import 'package:project_1_carecloud/utilities/customTextfornField.dart';
-// import 'package:project_1_carecloud/utilities/custom_date.dart';
-// import 'package:project_1_carecloud/utilities/custom_snackbar.dart';
-// import 'package:project_1_carecloud/utilities/custom_time.dart';
-// import 'package:project_1_carecloud/utilities/custombutton.dart';
-// import 'package:project_1_carecloud/view/blood_glucose_screen/blood_glucose_widget/custom_glucose_list.dart';
-// import 'package:project_1_carecloud/view/blood_glucose_screen/blood_glucose_widget/tabbar_widget.dart';
-
 class BloodGlucoseScreen extends StatefulWidget {
   const BloodGlucoseScreen({super.key});
 
@@ -130,22 +118,6 @@ class _BloodGlucoseScreenState extends State<BloodGlucoseScreen> {
                     ),
                     const SizedBox(height: 25),
                     const Text('Food Intake Timings* :'),
-                    // CustomRadioButtonGroup(
-                    //   labels: const [
-                    //     'Fasting Blood Sugar',
-                    //     'Before Meal',
-                    //     'After Meal (2hrs)',
-                    //     'Random Blood Sugar',
-                    //   ],
-                    //   groupValue: selectedFoodIntake,
-                    //   onChanged: (value) {
-                    //     setState(() {
-                    //       selectedFoodIntake = value;
-                    //       showError = false;
-                    //     });
-                    //   },
-                    // ),
-
                     CustomradiobuttonFoodintake(
                       label: 'Fasting Blood Sugar',
                       groupValue: selectedFoodIntake,
@@ -222,18 +194,7 @@ class _BloodGlucoseScreenState extends State<BloodGlucoseScreen> {
                               bloodGlucoseController.clear();
                               selectedFoodIntake = null;
                             });
-
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(
-                                content: Text(
-                                    'Blood glucose value added successfully!'),
-                                behavior: SnackBarBehavior.floating,
-                                backgroundColor: Colors.green,
-                                margin: EdgeInsets.all(20),
-                                duration: Duration(seconds: 3),
-                                showCloseIcon: true,
-                              ),
-                            );
+                            CustomSnackbar.show(context: context, text: 'Blood glucose value added successfully!', backgroundColor: Colors.green);
                           }
                         } else {
                           setState(() {
@@ -276,100 +237,3 @@ class _BloodGlucoseScreenState extends State<BloodGlucoseScreen> {
     );
   }
 }
-   // CustomradiobuttonFoodintake(
-                    //   label: 'Fasting Blood Sugar',
-                    //   groupValue: selectedFoodIntake,
-                    //   onChanged: (value) {
-                    //     setState(() {
-                    //       selectedFoodIntake = value;
-                    //       showError = false;
-                    //     });
-                    //   },
-                    // ),
-                    // CustomradiobuttonFoodintake(
-                    //   label: 'Before Meal',
-                    //   groupValue: selectedFoodIntake,
-                    //   onChanged: (value) {
-                    //     setState(() {
-                    //       selectedFoodIntake = value;
-                    //       showError = false;
-                    //     });
-                    //   },
-                    // ),
-                    // CustomradiobuttonFoodintake(
-                    //   label: 'After Meal (2hrs)',
-                    //   groupValue: selectedFoodIntake,
-                    //   onChanged: (value) {
-                    //     setState(() {
-                    //       selectedFoodIntake = value;
-                    //       showError = false;
-                    //     });
-                    //   },
-                    // ),
-                    // CustomradiobuttonFoodintake(
-                    //   label: 'Random Blood Sugar',
-                    //   groupValue: selectedFoodIntake,
-                    //   onChanged: (value) {
-                    //     setState(() {
-                    //       selectedFoodIntake = value;
-                    //       showError = false;
-                    //     });
-                    //   },
-                    // ),
-                                  
-                              // const SnackBar(
-                              //   content:
-                              //       Text('Please enter both date and time.'),
-                              //   behavior: SnackBarBehavior.floating,
-                              //   backgroundColor: Colors.red,
-                              //   margin: EdgeInsets.all(20),
-                              //   duration: Duration(seconds: 3),
-                              //   showCloseIcon: true,
-                              // ),
-                                  // CustomDateTimePicker(
-                    //   dateController: dateController,
-                    //   timeController: timeController,
-                    // ),
-                       // return Padding(
-                    //   padding: const EdgeInsets.only(
-                    //       left: 10, right: 10, bottom: 10),
-                    //   child: Card(
-                    //     elevation: 2,
-                    //     color: Colors.white70,
-                    //     child: Padding(
-                    //       padding: const EdgeInsets.all(20 - .0),
-                    //       child: Row(
-
-                    //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    //         children: [
-                    //           Column(
-                    //             crossAxisAlignment: CrossAxisAlignment.start,
-                    //             children: [
-                    //               Text(
-                    //                 '${bloodGlucose.date}, ${bloodGlucose.time}',
-                    //                 style: const TextStyle(
-                    //                   fontSize: 16,
-                    //                 ),
-                    //               ),
-                    //               Text(
-                    //                 bloodGlucose.foodIntakeTimings,
-                    //                 style:
-                    //                     const TextStyle(color: Colors.black54),
-                    //               ),
-                    //             ],
-                    //           ),
-                    //           Column(
-                    //             children: [
-                    //               Text(
-                    //                 bloodGlucose.glucose,
-                    //                 style: const TextStyle(
-                    //                     fontSize: 18, color: AppColors.primary),
-                    //               ),
-                    //               const Text('mg/dL')
-                    //             ],
-                    //           )
-                    //         ],
-                    //       ),
-                    //     ),
-                    //   ),
-                    // );

@@ -26,7 +26,7 @@ class SelectionScreen extends StatelessWidget {
                 height: 250,
                 width: 200,
                 child: Image.asset(
-                    'assets/app_logo/Care Cloud Logo.png'),
+                    'assets/app_logo/Care Cloud Logo 1 new.png'),
               ),
               const SizedBox(
                 height: 10,
